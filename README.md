@@ -4,7 +4,7 @@ import numpy as np
 # Questão 1
 class My_array:
     def __init__(self):
-        self.array= np.empty(8, dtype=object)
+        self.array= np.empty(1, dtype=object)
         self.size= 0
     def append(self, something):
         if self.size< len(self.array):
@@ -16,6 +16,8 @@ class My_array:
             for i in backup:
                 self.append(i)
             self.append(something)
+    def __str__(self):
+        return str(self.array)
 
 
     
@@ -30,7 +32,11 @@ class ToroArray(My_array):
 
 
 if __name__=="__main__":
-    tr= ToroArray([0,1,2,3,4,5,6,7,8,9])
-    print(tr[-36])
-    a= My_array()
-    print(len(a.array))
+   tr=ToroArray([10,11,12,13,14])
+   print(tr[6])
+   print (tr[-20])
+   a= My_array()
+   a.append(1)
+   print(a)
+   a.append(2)
+   print(a)
