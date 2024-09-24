@@ -1,5 +1,3 @@
-# Lista-2.2
-
 import numpy as np
 # Questão 1
 class My_array:
@@ -13,6 +11,7 @@ class My_array:
         else:
             backup= self.array
             self.array= np.empty(2*len(self.array), dtype=object)
+            self.size=0
             for i in backup:
                 self.append(i)
             self.append(something)
@@ -39,4 +38,6 @@ if __name__=="__main__":
    a.append(1)
    print(a)
    a.append(2)
+   print(a)
+   a.append(3)
    print(a)
